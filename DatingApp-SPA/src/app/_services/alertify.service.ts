@@ -15,17 +15,17 @@ export class AlertifyService {
     });
   }
 
-  success(message: string){
+  success(message: string) {
     alertify.success(message);
   }
 
-  warning(message: string){
+  warning(message: string) {
     alertify.warning(message);
   }
-  error(message: string){
+  error(message: string) {
     alertify.error(message);
   }
-  message(message: string){
+  message(message: string) {
     alertify.message(message);
   }
 }
