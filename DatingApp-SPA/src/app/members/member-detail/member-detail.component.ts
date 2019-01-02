@@ -16,7 +16,7 @@ import {
   styleUrls: ['./member-detail.component.css']
 })
 export class MemberDetailComponent implements OnInit {
-  user: User;
+  user: any;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
 
@@ -27,7 +27,11 @@ export class MemberDetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    // tslint:disable-next-line:no-debugger
+    debugger;
     this.route.data.subscribe(data => {
+      // tslint:disable-next-line:no-debugger
+      debugger;
       this.user = data['user'];
     });
 

@@ -14,7 +14,9 @@ export class NavComponent implements OnInit {
   constructor(public authService: AuthService, private alertifyService: AlertifyService,
     private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+   console.log( this.authService.decodedToken);
+  }
 
   login() {
     this.authService.Login(this.model).subscribe(
