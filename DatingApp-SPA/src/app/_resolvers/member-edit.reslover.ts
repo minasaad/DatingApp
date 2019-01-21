@@ -20,10 +20,10 @@ export class MemberEditResolver implements Resolve<User> {
     private authService: AuthService
   ) {}
 
-  resolve(route: ActivatedRouteSnapshot): Observable<User> {
+  resolve(route: ActivatedRouteSnapshot): Observable<any> {
     // tslint:disable-next-line:no-debugger
     debugger;
-    return this.userService.getUser(this.authService.decodedToken.nameid).pipe(
+    return this.userService.getUser(this.authService.decodedToken.nameid) .pipe(
       catchError(error => {
         this.alertify.error('Problem Loading Your Data');
         this.router.navigate(['/members']);
