@@ -20,7 +20,7 @@ export class MemberEditResolver implements Resolve<User> {
     private authService: AuthService
   ) {}
 
-  resolve(route: ActivatedRouteSnapshot): Observable<any> {
+  resolve(route: ActivatedRouteSnapshot): Observable<User> {
     // tslint:disable-next-line:no-debugger
     debugger;
     return this.userService.getUser(this.authService.decodedToken.nameid) .pipe(

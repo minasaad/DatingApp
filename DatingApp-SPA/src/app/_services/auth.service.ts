@@ -31,7 +31,7 @@ export class AuthService {
 
   loggedIn() {
     // tslint:disable-next-line:no-debugger
-    debugger;
+    //debugger;
     const token = localStorage.getItem('token');
     return !this.jwtHelper.isTokenExpired(token);
   }

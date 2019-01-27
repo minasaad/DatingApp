@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using AutoMapper;
+using DatingApp.API.Dtos;
 using DatingApp.API.DTOs;
 using DatingApp.API.Models;
 
@@ -26,6 +27,8 @@ namespace DatingApp.API.Helpers
                  opt.MapFrom(src => (DateTime.Today.Year - src.DateOfBirth.Year));
              });
              CreateMap<Photo,PhotosForDetailedDTO>();
+
+             CreateMap<UserForUpdateDto,User>();
 
          }
     }
