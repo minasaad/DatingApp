@@ -43,9 +43,8 @@ debugger;
 
   updateUser() {
     this.userService.updateUser(this.authService.decodedToken.nameid, this.user).subscribe(
-      
+
 next => {
-  
   this.alertify.success('The profile has been updated successfully.');
 this.editForm.reset(this.user);
 },  error => {

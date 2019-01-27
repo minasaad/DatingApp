@@ -28,8 +28,6 @@ getUser(id): Observable<User> {
 }
 
 updateUser(id: number, user: User) {
-
-  debugger;
   return this.http.put(this.baseURL + 'users/' + id, user);
 }
 

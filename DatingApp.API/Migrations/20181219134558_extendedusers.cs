@@ -39,6 +39,8 @@ namespace DatingApp.API.Migrations
                 table: "Users",
                 nullable: true);
 
+                
+
             migrationBuilder.AddColumn<string>(
                 name: "KnownAs",
                 table: "Users",
